@@ -10,6 +10,89 @@
 
     <title>Crypto Real-time | {% block title %}{% endblock %}</title>
   </head>
+  <style>
+    body{
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items:center;
+        min-height: 100vh;
+        justify-content: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  
+    a{
+        padding: 15px 30px;
+        position: relative;
+        text-transform: uppercase;
+        display: inline-block;
+        overflow: hidden;
+        text-decoration: none;
+        font-size:35px;
+        letter-spacing: 4px;
+        transition: 0.2s;
+    }
+    a:hover{
+        color: black;
+        background: yellow;
+        font-size:38px;
+        border-radius: 50px;
+        transition-delay: 1s;
+        box-shadow: 0  0 10px yellow, 0 0 40px red, 0 0 80px red;
+    }
+    a span{
+        position: absolute;
+        display: block;
+    }
+   a span:nth-child(1){
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background:linear-gradient(90deg, transparent,  red);
+    }
+     a:hover span:nth-child(1){
+         left: 100%;
+         transition: 1s;
+     }
+   a span:nth-child(3){
+      bottom: 0px;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background:linear-gradient(270deg, transparent,  blue);
+    }
+     a:hover span:nth-child(3){
+         right:  100%;
+         transition: 1s;
+         transition-delay: 0.5s;
+     }
+      a span:nth-child(2){
+      top: -100px;
+      right: 0px;
+      width: 2px;
+      height: 100%;
+      background:linear-gradient(180deg, transparent,  yellow);
+    }
+     a:hover span:nth-child(2){
+         top:  100%;
+         transition: 1s;
+         transition-delay: 0.25s;
+     }
+     a span:nth-child(4){
+      bottom: -100px;
+      left:  0px;
+      width: 2px;
+      height: 100%;
+      background:linear-gradient(360deg, transparent, rgb(225, 0, 255));
+    }
+     a:hover span:nth-child(4){
+         bottom:  100%;
+         transition: 1s;
+         transition-delay: 0.75s;
+     } 
+</style>
   <body>
     <div class="container">
         {% block content %}
@@ -17,7 +100,13 @@
         {% block scripts %}
         {% endblock %}
     </div>
-
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Light Button
+    </a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
