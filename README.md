@@ -1,2 +1,2 @@
 # cryptodatafetch
-An app which fetches realtime data from crypto API.
+An app which fetches realtime data from Crypto API.
